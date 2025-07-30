@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${ovo.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
