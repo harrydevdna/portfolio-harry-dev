@@ -12,6 +12,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Timeline from './timeline/Timeline';
 import { Button } from './ui/button';
+import { Separator } from "./ui/separator";
 
 const AboutMe = () => {
   const words = ABOUT_ME_HI.split(' ');
@@ -35,7 +36,11 @@ const AboutMe = () => {
 
   return (
     <section id='about-me' className='pt-20 md:pt-30 flex items-center justify-center flex-col gap-8 md:gap-12 max-w-11/12 mx-auto'>
-      <Image src={'/golden.jfif'} width={200} height={200} alt='avatar' className='w-28 h-28 md:w-40 md:h-40 rounded-full object-cover' />
+      <div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl">About Me</h1>
+        <Separator className='bg-cyan-400 py-[1px] mt-2'/>
+      </div>
+      <Image src={'/avatar.jpg'} width={200} height={200} alt='avatar' className='w-28 h-28 md:w-40 md:h-40 rounded-full object-cover' />
       <h4 className='text-2xl md:text-3xl text-center h-18 lg:h-10'>
         {words.slice(0, visibleWordCount).map((word, idx) => (
           <span
