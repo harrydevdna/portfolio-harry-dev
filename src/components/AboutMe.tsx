@@ -1,11 +1,84 @@
-import React from 'react'
+'use client';
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ABOUT_ME_HI, ABOUT_ME_MAIN, EDUCATION, WORK_EXPERIENCE } from '@/constants';
+import { ArrowRight, Download } from 'lucide-react';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Timeline from './timeline/Timeline';
+import { Button } from './ui/button';
 
 const AboutMe = () => {
+  const words = ABOUT_ME_HI.split(' ');
+  const [visibleWordCount, setVisibleWordCount] = useState(0);
+
+  useEffect(() => {
+    if (visibleWordCount < words.length) {
+      const timer = setTimeout(() => {
+        setVisibleWordCount(visibleWordCount + 1);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [visibleWordCount, words.length]);
+
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id='about-me' className='min-h-screen flex items-center justify-center'>
-      <h1 className="text-4xl font-bold">About me</h1>
+    <section id='about-me' className='pt-20 md:pt-30 flex items-center justify-center flex-col gap-8 md:gap-12 max-w-11/12 mx-auto'>
+      <Image src={'/golden.jfif'} width={200} height={200} alt='avatar' className='w-28 h-28 md:w-40 md:h-40 rounded-full object-cover' />
+      <h4 className='text-2xl md:text-3xl text-center h-18 lg:h-10'>
+        {words.slice(0, visibleWordCount).map((word, idx) => (
+          <span
+            key={idx}
+            className="fade-in-word"
+            style={{ transitionDelay: `${idx * 100}ms` }}
+          >
+            {word}{' '}
+          </span>
+        ))}
+      </h4>
+      <h1 className='text-4xl md:text-6xl max-w-[750px] text-center'>{ABOUT_ME_MAIN}</h1>
+      <div className='flex gap-4'>
+        <Button 
+          className='text-lg md:text-xl border-[1px] !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'
+          onClick={handleContactClick}
+        >
+          Connect with me<ArrowRight className='!w-6 !h-6 md:!w-8 md:!h-8'/>
+        </Button>
+        <Button variant='secondary' className='text-lg md:text-xl border-[1px] border-black dark:border-white !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'>My resume<Download className='!w-6 !h-6 md:!w-8 md:!h-8' /></Button>
+      </div>
+
+      <Accordion 
+        type="multiple"
+        className="w-11/12 md:w-9/12"
+        defaultValue={[]}
+      >
+        <AccordionItem value="work-experience">
+          <AccordionTrigger className="text-2xl md:text-3xl">Work Experience</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+            <Timeline items={WORK_EXPERIENCE} />
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="education">
+          <AccordionTrigger className="text-2xl md:text-3xl">Education</AccordionTrigger>
+          <AccordionContent className="flex flex-col gap-4 text-balance">
+          <Timeline items={EDUCATION} />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+      
     </section>
   )
 }
 
-export default AboutMe
+export default AboutMe;

@@ -15,7 +15,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <Button variant="ghost" size="icon" className="rounded-full">
-        <Sun className="!h-8 !w-8" />
+        <Moon className="!h-8 !w-8" />
       </Button>
     )
   }
@@ -28,7 +28,7 @@ export function ThemeToggle() {
         className="rounded-full hover:bg-transparent cursor-pointer"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        {theme === "light" ? <Moon className="!w-8 !h-8" /> : <Sun className="!w-8 !h-8" />}
+        {theme === "dark" ? <Sun className="!w-8 !h-8" /> : <Moon className="!w-8 !h-8" />}
       </Button>
     </div>
   )
