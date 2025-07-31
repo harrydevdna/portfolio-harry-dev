@@ -42,7 +42,7 @@ const Experiences = () => {
 
       <Carousel
         plugins={[plugin.current]}
-        className='w-3/4 md:w-10/12'
+        className='w-2/3 md:w-10/12'
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         opts={{
@@ -56,23 +56,23 @@ const Experiences = () => {
               key={index}
               className='basis-1/1 md:basis-1/2 lg:basis-1/3'
             >
-              <Card className='h-[30vh] lg:h-[60vh] lg:max-h-[350px] py-8 flex justify-between dark:border-1 dark:border-gray-600'>
+              <Card className='h-[32vh] md:h-[30vh] lg:h-[60vh] lg:max-h-[350px] py-4 md:py-8 flex justify-between dark:border-1 dark:border-gray-600'>
                 <CardHeader>
-                  <div className='flex items-center gap-4 mb-3'>
+                  <div className='flex items-center gap-4'>
                     <Image
                       src={experience.logo}
                       width={80}
                       height={80}
                       alt='company logo'
-                      className='w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 border-1 border-gray-300 dark:border-white dark:bg-white rounded-sm object-contain'
+                      className='w-16 h-16 md:w-24 md:h-24 lg:w-28 lg:h-28 border-1 border-gray-300 dark:border-white dark:bg-white rounded-sm object-contain'
                     />
-                    <div className='flex flex-col gap-3'>
-                      <CardTitle className='md:text-lg lg:text-xl font-semibold'>
+                    <div className='flex flex-col gap-1 md:gap-3'>
+                      <CardTitle className='text-xs md:text-lg lg:text-xl font-semibold'>
                         {experience.companyName ?? experience.projectName}
                       </CardTitle>
                       <Badge
                         variant='secondary'
-                        className='text-xs lg:text-sm dark:bg-gray-700 bg-gray-200'
+                        className='text-[8px] md:text-xs lg:text-sm dark:bg-gray-700 bg-gray-200'
                       >
                         {experience.title}
                       </Badge>
@@ -83,12 +83,12 @@ const Experiences = () => {
                   <div className='flex flex-col gap-2'>
                     <div className='flex items-center gap-2 text-sm text-muted-foreground'>
                       <Calendar className='w-4 h-4 lg:w-5 lg:h-5' />
-                      <span className='lg:text-lg'>{experience.period}</span>
+                      <span className='text-xs lg:text-lg'>{experience.period}</span>
                     </div>
                     {experience.location && (
                       <div className='flex items-center gap-2 text-sm text-muted-foreground'>
                         <MapPin className='w-4 h-4 lg:w-5 lg:h-5' />
-                        <span className='lg:text-lg'>
+                        <span className='text-xs lg:text-lg'>
                           {experience.location}
                         </span>
                       </div>
@@ -99,7 +99,7 @@ const Experiences = () => {
                     <DialogTrigger asChild>
                       <Button
                         variant='outline'
-                        className='w-full h-8 md:h-10 lg:h-12 shadow-md text-sm md:text-base lg:text-lg cursor-pointer'
+                        className='w-full h-8 md:h-10 lg:h-12 shadow-md text-[12px] md:text-base lg:text-lg cursor-pointer'
                       >
                         View Details
                       </Button>
@@ -118,12 +118,12 @@ const Experiences = () => {
                             className='w-20 h-20 md:w-30 md:h-30 lg:w-36 lg:h-36 border-1 border-gray-300 dark:border-white dark:bg-white rounded-sm object-contain'
                           />
                           <div className='flex flex-col gap-2 lg:gap-4'>
-                            <p className='text-xl md:text-2xl lg:text-4xl font-bold text-start'>
+                            <p className='text-base md:text-2xl lg:text-4xl font-bold text-start'>
                               {experience.companyName ?? experience.projectName}
                             </p>
                             <Badge
                               variant='secondary'
-                              className='text-xs md:text-sm lg:text-base dark:bg-gray-700 bg-gray-200'
+                              className='text-[10px] md:text-sm lg:text-base dark:bg-gray-700 bg-gray-200'
                             >
                               {experience.title}
                             </Badge>
@@ -194,7 +194,7 @@ const Experiences = () => {
                         {experience.teamSize && (
                           <h4 className='font-semibold mb-2 text-lg md:text-xl lg:text-2xl'>
                             Team size:{' '}
-                            <span className='md:text-lg lg:text-xl font-thin'>
+                            <span className='text-base md:text-lg lg:text-xl font-thin'>
                               {experience.teamSize} members
                             </span>
                           </h4>

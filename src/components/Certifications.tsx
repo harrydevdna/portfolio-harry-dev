@@ -41,44 +41,44 @@ const Certifications = () => {
               </div>
             </AccordionTrigger>
 
-            <AccordionContent className='flex flex-col gap-4 text-balance px-8 md:px-18'>
+            <AccordionContent className='flex flex-col gap-4 text-balance md:px-6 lg:px-18'>
               <Card className='shadow-sm dark:border-1 dark:border-gray-600'>
                 <CardContent>
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
                     <div className='flex lg:flex-col justify-between'>
                       <div className='flex flex-col gap-4'>
-                        <div className='flex items-center gap-5'>
-                          <Building2 className='w-4 h-4 lg:w-6 lg:h-6 text-muted-foreground' />
+                        <div className='flex items-center gap-2 md:gap-5'>
+                          <Building2 className='w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-muted-foreground' />
                           <div>
-                            <p className='text-xs md:text-sm lg:text-base text-muted-foreground'>
+                            <p className='text-[10px] md:text-sm lg:text-base text-muted-foreground'>
                               Issued by
                             </p>
-                            <p className='font-semibold text-sm md:text-base lg:text-xl'>
+                            <p className='font-semibold text-xs md:text-base lg:text-xl'>
                               {cert.issuer}
                             </p>
                           </div>
                         </div>
 
-                        <div className='flex items-center gap-5'>
-                          <Calendar className='w-4 h-4 lg:w-6 lg:h-6 text-muted-foreground' />
+                        <div className='flex items-center gap-2 md:gap-5'>
+                          <Calendar className='w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-muted-foreground' />
                           <div>
-                            <p className='text-xs md:text-sm lg:text-base text-muted-foreground'>
+                            <p className='text-[10px] md:text-sm lg:text-base text-muted-foreground'>
                               Date Received
                             </p>
-                            <p className='font-semibold text-sm md:text-base lg:text-xl'>
+                            <p className='font-semibold text-xs md:text-base lg:text-xl'>
                               {cert.dateReceived}
                             </p>
                           </div>
                         </div>
 
                         {cert.validUntil && (
-                          <div className='flex items-center gap-5'>
-                            <Calendar className='w-4 h-4 lg:w-6 lg:h-6 text-muted-foreground' />
+                          <div className='flex items-center gap-2 md:gap-5'>
+                            <Calendar className='w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-muted-foreground' />
                             <div>
-                              <p className='text-xs md:text-sm lg:text-base text-muted-foreground'>
+                              <p className='text-[10px] md:text-sm lg:text-base text-muted-foreground'>
                                 Valid Until
                               </p>
-                              <p className='font-semibold text-sm md:text-base lg:text-xl'>
+                              <p className='font-semibold text-xs md:text-base lg:text-xl'>
                                 {cert.validUntil}
                               </p>
                             </div>
@@ -100,7 +100,7 @@ const Certifications = () => {
                               className='flex items-center gap-1 lg:gap-3'
                             >
                               <ExternalLink className='!w-3 !h-3 lg:!w-5 lg:!h-5' />
-                              <span className='text-xs md:text-base lg:text-lg'>
+                              <span className='text-[10px] md:text-base lg:text-lg'>
                                 View Details
                               </span>
                             </Link>

@@ -19,10 +19,10 @@ const TimelineItem: React.FC<ITimelineItemProps> = ({
 
       <div className='flex-1 pb-6'>
         <div className='flex items-start justify-between mb-2'>
-          <h3 className='text-lg md:text-xl font-semibold text-foreground max-w-7/12'>
+          <h3 className='text-base md:text-xl font-semibold text-foreground max-w-7/12'>
             {title}
           </h3>
-          <span className='text-xs md:text-sm dark:text-white dark:border-white border-1 border-black text-black px-4 py-2 rounded-full'>
+          <span className='text-[10px] md:text-sm dark:text-white dark:border-white border-1 border-black text-black px-2 py-1 md:px-4 md:py-2 rounded-full'>
             {period}
           </span>
         </div>
