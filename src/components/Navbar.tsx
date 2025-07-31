@@ -66,7 +66,7 @@ const Navbar = () => {
     <div className='flex justify-between items-center fixed w-full z-50 md:px-4 px-4 backdrop-blur-sm '>
       <Image src={'/common/logo.webp'} alt='logo' width={100} height={100} className='w-18 h-18 md:w-25 md:h-25 cursor-pointer object-contain' onClick={e => handleNavClick(e, NAV_ITEMS[0].target)}/>
       <NavigationMenu className='hidden md:block'>
-        <NavigationMenuList className='bg-background/50 py-4 px-12 lg:px-20 shadow-2xl rounded-full'>
+        <NavigationMenuList className='bg-background/50 py-4 px-8 lg:px-16 shadow-2xl rounded-full'>
           {NAV_ITEMS.map((item) => (
             <NavigationMenuItem key={item.target}>
               <NavigationMenuLink
@@ -90,7 +90,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <ul ref={menuRef} className='md:hidden fixed bg-sky-200 dark:bg-gray-600 top-0 bottom-0 h-screen w-48 -right-48 flex flex-col px-6 py-8 font-medium transition duration-500'>
+      <ul ref={menuRef} className='md:hidden fixed bg-cyan-100 dark:bg-gray-800 top-0 bottom-0 h-screen w-48 -right-48 flex flex-col px-6 py-8 font-medium transition duration-500'>
         <Button variant='ghost' className='rounded-full hover:bg-transparent block md:hidden right-0 absolute top-0' size='icon' onClick={closeMenu}><X className="!w-8 !h-8" color='red'/></Button>
         <a className='py-2 text-xl' href='#about-me' onClick={closeMenu}>About me</a>
         <a className='py-2 text-xl' href='#skills' onClick={closeMenu}>Skills</a>

@@ -21,7 +21,7 @@ export const WORK_EXPERIENCE = [
     description: []
   },
   {
-    title: 'Junior Game Developer',
+    title: 'Game Developer',
     name: 'Nexon',
     location: 'Ho Chi Minh City, Vietnam',
     period: '09/2024 - 08/2025',
@@ -84,7 +84,7 @@ export const EXPERIENCE_PROJECTS = [
     teamSize: 10,
   },
   {
-    title: 'Junior Game Developer',
+    title: 'Game Developer',
     isCompany: true,
     companyName: 'Nexon',
     logo: '/experience/nexon.webp',
@@ -248,3 +248,17 @@ export const CERTIFICATIONS = [
     certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
   }
 ] as ICertificateProps[];
+
+export const CONTACT_INFORMATION = {
+  phoneNumber: '0372485570',
+  email: 'phuothuynh2002@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/harrydevdna',
+  github: 'https://github.com/harrydevdna',
+  leetcode: 'https://leetcode.com/u/harrydevdna',
+  facebook: 'https://www.facebook.com/harrydevdna'
+};
+
+export const CONTACT_CONTENT = {
+  title: 'Ready to work together?',
+  content: `I'm always interested in new opportunities and exciting projects. Let's discuss how we can bring your ideas to life!`
+}

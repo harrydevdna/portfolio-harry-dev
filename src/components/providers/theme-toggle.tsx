@@ -23,12 +23,12 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center gap-4">
       <Button
-        variant="ghost"
+        variant="outline"
         size='icon'
-        className="rounded-full hover:bg-transparent cursor-pointer"
+        className="rounded-full cursor-pointer p-6 lg:p-8 bg-cyan-50 hover:bg-cyan-100"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        {theme === "dark" ? <Sun className="!w-8 !h-8" /> : <Moon className="!w-8 !h-8" />}
+        {theme === "dark" ? <Sun className="!w-8 !h-8 lg:!w-10 lg:!h-10" /> : <Moon className="!w-8 !h-8 lg:!w-10 lg:!h-10" />}
       </Button>
     </div>
   )
