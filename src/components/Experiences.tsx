@@ -18,7 +18,7 @@ const Experiences = () => {
   );
 
   return (
-    <div id='experiences' className='pt-20 md:pt-30 flex flex-col gap-8 md:gap-12 items-center justify-center'>
+    <div id='experiences' className='pt-18 md:pt-24 flex flex-col gap-8 md:gap-12 items-center justify-center'>
       <div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl">Work Experience</h1>
         <Separator className='bg-cyan-400 py-[1px] mt-2'/>
@@ -74,12 +74,12 @@ const Experiences = () => {
                     <DialogTrigger asChild>
                       <Button 
                         variant="outline" 
-                        className="w-full h-12 lg:h-16 shadow-md lg:text-xl"
+                        className="w-full h-12 lg:h-16 shadow-md lg:text-xl cursor-pointer"
                       >
                         View Details
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="w-5/6 !max-w-3xl flex flex-col gap-8 max-h-[80dvh] overflow-y-auto">
+                    <DialogContent className="w-5/6 !max-w-3xl flex flex-col gap-8 max-h-[80dvh] overflow-y-auto px-10" showCloseButton={false}>
                       <DialogHeader>
                         <DialogTitle className="flex items-center gap-4">
                           <Image 

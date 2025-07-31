@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 const Certifications = () => {
   return (
-    <div id='certifications' className='pt-20 md:pt-30 flex items-center justify-center flex-col gap-8 md:gap-12 max-w-11/12 mx-auto'>
+    <div id='certifications' className='pt-18 md:pt-24 flex items-center justify-center flex-col gap-8 md:gap-12 max-w-11/12 mx-auto'>
       <div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl">Certifications</h1>
         <Separator className='bg-cyan-400 py-[1px] mt-2'/>
@@ -18,12 +18,12 @@ const Certifications = () => {
 
       <Accordion
         type="multiple"
-        className="w-11/12 md:w-9/12"
+        className="w-11/12"
         defaultValue={[]}
       >
         {CERTIFICATIONS.map((cert, key) => 
           <AccordionItem key={key} value={cert.name}>
-            <AccordionTrigger className="text-xl md:text-2xl hover:no-underline cursor-pointer py-8">
+            <AccordionTrigger className="hover:no-underline cursor-pointer py-4 md:p-6 lg:p-8">
               <div className="flex items-center gap-3 text-xl lg:text-3xl">
                 <Trophy className="w-5 h-5 lg:w-7 lg:h-7 text-orange-400" />
                 {cert.name}
@@ -65,14 +65,14 @@ const Certifications = () => {
 
                       {cert.certificateLink && (
                         <div>
-                          <Button asChild variant="outline" className="w-full lg:w-2/5 h-10 lg:h-16 bg-transparent">
+                          <Button asChild variant="outline" className="w-full lg:w-1/3 h-10 lg:h-16 bg-transparent">
                             <Link
                               href={cert.certificateLink}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center lg:gap-3"
                             >
-                              <ExternalLink className="lg:!w-8 lg:!h-8" />
+                              <ExternalLink className="lg:!w-7 lg:!h-7" />
                               <span className='text-sm lg:text-xl'>View Details</span>
                             </Link>
                           </Button>

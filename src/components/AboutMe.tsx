@@ -35,7 +35,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section id='about-me' className='pt-20 md:pt-30 flex items-center justify-center flex-col gap-8 md:gap-12 max-w-11/12 mx-auto'>
+    <section id='about-me' className='pt-18 md:pt-24 flex items-center justify-center flex-col gap-8 md:gap-12 max-w-11/12 mx-auto'>
       <div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl">About Me</h1>
         <Separator className='bg-cyan-400 py-[1px] mt-2'/>
