@@ -22,19 +22,19 @@ export interface IProjectProps {
   description: string;
   responsibilities: string[];
   technologies: {
-    'front-end'?: string,
-    'back-end'?: string,
-    'others'?: string
+    'front-end'?: string;
+    'back-end'?: string;
+    'others'?: string;
   };
   teamSize: number;
   link?: string;
 }
 
 export interface ICertificateProps {
-  name: string,
-  issuer: string,
-  dateReceived: string,
-  validUntil?: string,
-  certificateImage: string,
-  certificateLink: string
+  name: string;
+  issuer: string;
+  dateReceived: string;
+  validUntil?: string;
+  certificateImage: string;
+  certificateLink: string;
 }
