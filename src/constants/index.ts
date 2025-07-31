@@ -1,23 +1,4 @@
-import { ITimelineItemProps } from '@/components/timeline/Timeline';
-
-interface IProjectProps {
-  title: string;
-  isCompany?: false;
-  companyName?: string;
-  logo: string;
-  projectName?: string;
-  location?: string;
-  period: string;
-  description: string;
-  responsibilities: string[];
-  technologies: {
-    'front-end'?: string,
-    'back-end'?: string,
-    'others'?: string
-  };
-  teamSize: number;
-  link?: string;
-}
+import { ICertificateProps, IProjectProps, ITimelineItemProps } from "@/types";
 
 export const NAV_ITEMS = [
   { label: 'About me', target: 'about-me' },
@@ -62,7 +43,7 @@ export const EDUCATION = [
     location: 'Ho Chi Minh City, Vietnam',
     period: '09/2020 - 12/2024',
     description: [
-      "Bachelor's degree with a GPA of 8.46/10",
+      "Bachelor's degree with a GPA of 8.46/10 (Very Good)",
       '100% scholarship for all four years of study',
       'Honorable Student in all 9 out of 9 semesters'
     ],
@@ -85,7 +66,7 @@ export const EXPERIENCE_PROJECTS = [
     title: 'Software Engineer',
     isCompany: true,
     companyName: 'Spartan',
-    logo: '/spartan.webp',
+    logo: '/experience/spartan.webp',
     location: 'Da Nang City, Vietnam',
     period: '08/2025 - Present',
     description: 'Developed and maintained high-performance web applications using React, TypeScript, and Node.js',
@@ -106,7 +87,7 @@ export const EXPERIENCE_PROJECTS = [
     title: 'Junior Game Developer',
     isCompany: true,
     companyName: 'Nexon',
-    logo: '/nexon.webp',
+    logo: '/experience/nexon.webp',
     location: 'Ho Chi Minh City, Vietnam',
     period: '09/2024 - 08/2025',
     description: 'Developed and maintained high-performance web applications using React, TypeScript, and Node.js',
@@ -127,7 +108,7 @@ export const EXPERIENCE_PROJECTS = [
     title: 'Full-Stack Developer',
     isCompany: true,
     companyName: 'FPT Software',
-    logo: '/fpt-university.webp',
+    logo: '/experience/fpt-software.webp',
     location: 'Ho Chi Minh City, Vietnam',
     period: '09/2023 - 08/2024',
     description: "CurbWaste is a platform that offers features such as order management, real-time tracking of inventory and ETAs, automated invoicing, data centric reporting, integrated e-commerce, and real-time dispatch. CurbWaste is implemented to help waste hauling businesses improve efficiency, profitability and contribute to waste treatment to protect the environment",
@@ -146,8 +127,8 @@ export const EXPERIENCE_PROJECTS = [
   },
   {
     title: 'Front-End Developer',
-    projectName: 'VFoody (FPT University)',
-    logo: '/fpt-university.webp',
+    projectName: 'Meal Sync (FPT University)',
+    logo: '/experience/fpt-university.webp',
     period: '05/2024 - 12/2024',
     description: "A platform to connect local food and beverage retailers, and restaurants with Vinhome residents",
     responsibilities: [
@@ -167,7 +148,7 @@ export const EXPERIENCE_PROJECTS = [
   {
     title: 'Front-End Developer',
     projectName: 'TradeNex (Freelance Job)',
-    logo: '/freelance.webp',
+    logo: '/experience/freelance.webp',
     period: '03/2024 - 06/2024',
     description: "Stock Market Platform is a comprehensive online platform designed to provide users with up-to-the-minute information and analysis on global stock markets. The platform will offer real-time stock quotes, market indices, detailed company information, and interactive charts to help investors make informed decisions",
     responsibilities: [
@@ -182,7 +163,7 @@ export const EXPERIENCE_PROJECTS = [
   {
     title: 'Front-End Developer',
     projectName: 'Bird Trading Platform (FPT University)',
-    logo: '/fpt-university.webp',
+    logo: '/experience/fpt-university.webp',
     period: '03/2024 - 06/2024',
     description: "This platform dedicated to creating a community for bird enthusiasts. It serves as a comprehensive online marketplace for buying, selling, and trading birds, bird-related products, and services",
     responsibilities: [
@@ -200,3 +181,70 @@ export const EXPERIENCE_PROJECTS = [
     teamSize: 5,
   }
 ] as IProjectProps[];
+
+export const CERTIFICATIONS = [
+  {
+    name: 'Test of English for International Communication (TOEIC)',
+    issuer: 'IIG Vietnam',
+    dateReceived: '15/08/2024',
+    validUntil: '15/08/2026',
+    certificateImage: '/certification/TOEIC.webp',
+    certificateLink: 'https://github.com/harrydevdna/awards?tab=readme-ov-file#toeic-certification-655-overall'
+  },
+  {
+    name: 'User Experience Research and Design',
+    issuer: 'University of Michigan',
+    dateReceived: '05/2024',
+    certificateImage: '/certification/user-experience-research-and-design.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'Project Management Principles and Practices',
+    issuer: 'University of California, Irvine',
+    dateReceived: '01/2024',
+    certificateImage: '/certification/project-management-principles-and-practices.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'Academic English: Writing',
+    issuer: 'University of California, Irvine',
+    dateReceived: '09/2023',
+    certificateImage: '/certification/academic-english-writing.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'CertNexus Certified Ethical Emerging Technologist',
+    issuer: 'CertNexus',
+    dateReceived: '05/2023',
+    certificateImage: '/certification/certnexus-certified-ethical-emerging-technologist.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'Software Development Lifecycle',
+    issuer: 'University of Minnesota',
+    dateReceived: '01/2023',
+    certificateImage: '/certification/software-development-lifecycle.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'Web Design for Everybody_Basics of Web Development & Coding',
+    issuer: 'University of Michigan',
+    dateReceived: '10/2022',
+    certificateImage: '/certification/web-design-for-everybody-basics-of-web-development-coding.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'Computer Communications',
+    issuer: 'University of Colorado System',
+    dateReceived: '07/2022',
+    certificateImage: '/certification/computer-communications.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  },
+  {
+    name: 'Academic Skills for University Success',
+    issuer: 'The University of Sydney',
+    dateReceived: '01/2022',
+    certificateImage: '/certification/academic-skills-for-university-success.webp',
+    certificateLink: 'https://www.coursera.org/account/accomplishments/specialization/26T2J4MTLUK8'
+  }
+] as ICertificateProps[];

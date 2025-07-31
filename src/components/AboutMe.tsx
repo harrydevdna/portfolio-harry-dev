@@ -40,7 +40,7 @@ const AboutMe = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl">About Me</h1>
         <Separator className='bg-cyan-400 py-[1px] mt-2'/>
       </div>
-      <Image src={'/avatar.jpg'} width={200} height={200} alt='avatar' className='w-28 h-28 md:w-40 md:h-40 rounded-full object-cover' />
+      <Image src={'/common/avatar.webp'} width={200} height={200} alt='avatar' className='w-28 h-28 md:w-40 md:h-40 rounded-full object-cover' />
       <h4 className='text-2xl md:text-3xl text-center h-18 lg:h-10'>
         {words.slice(0, visibleWordCount).map((word, idx) => (
           <span
@@ -69,13 +69,13 @@ const AboutMe = () => {
         defaultValue={[]}
       >
         <AccordionItem value="work-experience">
-          <AccordionTrigger className="text-2xl md:text-3xl">Work Experience</AccordionTrigger>
+          <AccordionTrigger className="text-2xl md:text-3xl hover:no-underline cursor-pointer">Work Experience</AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">
             <Timeline items={WORK_EXPERIENCE} />
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="education">
-          <AccordionTrigger className="text-2xl md:text-3xl">Education</AccordionTrigger>
+          <AccordionTrigger className="text-2xl md:text-3xl hover:no-underline cursor-pointer">Education</AccordionTrigger>
           <AccordionContent className="flex flex-col gap-4 text-balance">
           <Timeline items={EDUCATION} />
           </AccordionContent>

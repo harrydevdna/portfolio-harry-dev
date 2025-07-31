@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center fixed w-full z-50 md:px-4 px-4 backdrop-blur-sm '>
-      <Image src='/logo.png' alt='logo' width={100} height={100} className='w-18 h-18 md:w-25 md:h-25 cursor-pointer object-contain' onClick={e => handleNavClick(e, NAV_ITEMS[0].target)}/>
+      <Image src={'/common/logo.webp'} alt='logo' width={100} height={100} className='w-18 h-18 md:w-25 md:h-25 cursor-pointer object-contain' onClick={e => handleNavClick(e, NAV_ITEMS[0].target)}/>
       <NavigationMenu className='hidden md:block'>
         <NavigationMenuList className='bg-background/50 py-4 px-12 lg:px-20 shadow-2xl rounded-full'>
           {NAV_ITEMS.map((item) => (
