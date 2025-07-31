@@ -35,9 +35,8 @@ export default function RootLayout({
           {children}
           <Toaster position="top-right" expand={false} richColors toastOptions={{
             classNames: {
-              title: "md:text-lg font-semibold",
-              description: "md:text-lg text-muted-foreground",
-              actionButton: "!px-5 !py-4",
+              title: "font-semibold",
+              description: "text-muted-foreground",
             }
           }}/>
         </ThemeProvider>
