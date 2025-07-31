@@ -1,14 +1,6 @@
+import { ITimelineItemProps, ITimelineProps } from '@/types';
 import { Building, MapPin, School } from 'lucide-react';
 import React from 'react';
-
-export interface ITimelineItemProps {
-  title: string;
-  name: string;
-  location: string;
-  period: string;
-  description: string[];
-  isCompany?: boolean;
-}
 
 const TimelineItem: React.FC<ITimelineItemProps> = ({
   title,
@@ -56,10 +48,6 @@ const TimelineItem: React.FC<ITimelineItemProps> = ({
   );
 };
 
-interface ITimelineProps {
-  items: ITimelineItemProps[];
-}
-
 const Timeline: React.FC<ITimelineProps> = ({ items }) => {
   return (
     <div className="space-y-4">
@@ -73,4 +61,4 @@ const Timeline: React.FC<ITimelineProps> = ({ items }) => {
   );
 };
 
-export default Timeline; 
+export default Timeline;
