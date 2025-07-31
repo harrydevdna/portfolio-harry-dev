@@ -116,7 +116,7 @@ const Contact = () => {
                 key={index}
                 className='group hover:shadow-lg transition-all duration-300 border-2 dark:hover:border-gray-200 hover:border-gray-500'
               >
-                <CardContent className=''>
+                <CardContent className='px-2'>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
                       <div

@@ -66,23 +66,23 @@ const AboutMe = () => {
           </span>
         ))}
       </h4>
-      <h1 className='text-3xl md:text-4xl lg:text-5xl max-w-[750px] text-center'>
+      <h1 className='text-2xl md:text-4xl lg:text-5xl max-w-[750px] text-center'>
         {ABOUT_ME_MAIN}
       </h1>
       <div className='flex gap-4'>
         <Button
-          className='text-lg md:text-xl border-[1px] !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'
+          className='md:text-xl border-[1px] !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'
           onClick={handleContactClick}
         >
           Connect with me
-          <ArrowRight className='!w-6 !h-6 md:!w-8 md:!h-8' />
+          <ArrowRight className='!w-5 !h-5 md:!w-8 md:!h-8' />
         </Button>
         <Button
           variant='secondary'
-          className='text-lg md:text-xl border-[1px] border-black dark:border-white !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'
+          className='md:text-xl border-[1px] border-black dark:border-white !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'
         >
           My resume
-          <Download className='!w-6 !h-6 md:!w-8 md:!h-8' />
+          <Download className='!w-5 !h-5 md:!w-8 md:!h-8' />
         </Button>
       </div>
 
