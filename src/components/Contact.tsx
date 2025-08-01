@@ -11,16 +11,14 @@ import {
   Heart,
   Linkedin,
   Mail,
-  MapPin,
-  Phone,
+  Phone
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Badge } from './ui/badge';
+import { toast } from 'sonner';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Separator } from './ui/separator';
-import { toast } from 'sonner';
 
 const contactItems = [
   {
@@ -114,9 +112,9 @@ const Contact = () => {
             return (
               <Card
                 key={index}
-                className='group hover:shadow-lg transition-all duration-300 border-2 dark:hover:border-gray-200 hover:border-gray-500'
+                className='group hover:shadow-lg py-3 md:py-6 transition-all duration-300 border-2 dark:hover:border-gray-200 hover:border-gray-500'
               >
-                <CardContent className='px-2'>
+                <CardContent className='px-2 md:px-4'>
                   <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-4'>
                       <div
@@ -182,7 +180,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className='text-center max-w-2xl'>
+      <div className='text-center w-11/12 max-w-2xl'>
         <h3 className='text-xl md:text-2xl font-semibold mb-4'>
           {CONTACT_CONTENT.title}
         </h3>
