@@ -42,7 +42,7 @@ const Experiences = () => {
 
       <Carousel
         plugins={[plugin.current]}
-        className='w-2/3 md:w-10/12'
+        className='w-2/3 md:w-5/6 max-w-7xl'
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         opts={{
@@ -56,7 +56,7 @@ const Experiences = () => {
               key={index}
               className='basis-1/1 md:basis-1/2 lg:basis-1/3'
             >
-              <Card className='h-[32vh] md:h-[30vh] lg:h-[60vh] lg:max-h-[350px] py-4 md:py-8 flex justify-between dark:border-1 dark:border-gray-600'>
+              <Card className='h-[215px] md:h-[300px] lg:h-[60vh] lg:max-h-[350px] py-4 md:py-8 flex justify-between dark:border-1 dark:border-gray-600'>
                 <CardHeader>
                   <div className='flex items-center gap-4'>
                     <Image
@@ -130,21 +130,23 @@ const Experiences = () => {
                           </div>
                         </DialogTitle>
                       </DialogHeader>
-                      <div className='space-y-3'>
-                        <div className='flex items-center gap-2 text-sm text-muted-foreground'>
-                          <Calendar className='w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6' />
-                          <span className='md:text-lg'>
-                            {experience.period}
-                          </span>
-                        </div>
-                        {experience.location && (
+                      <div className='space-y-6'>
+                        <div className='space-y-2'>
                           <div className='flex items-center gap-2 text-sm text-muted-foreground'>
-                            <MapPin className='w-4 h-4 lg:w-6 lg:h-6' />
-                            <span className='md:text-lg lg:text-xl'>
-                              {experience.location}
+                            <Calendar className='w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6' />
+                            <span className='text-xs md:text-base lg:text-lg'>
+                              {experience.period}
                             </span>
                           </div>
-                        )}
+                          {experience.location && (
+                            <div className='flex items-center gap-2 text-sm text-muted-foreground'>
+                              <MapPin className='w-3 h-3 md:w-4 md:h-4 lg:w-6 lg:h-6' />
+                              <span className='text-xs md:text-base lg:text-lg'>
+                                {experience.location}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                         <div>
                           <h4 className='font-semibold mb-2 text-lg md:text-xl lg:text-2xl'>
                             Description:

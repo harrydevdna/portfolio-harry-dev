@@ -75,7 +75,7 @@ const Navbar = () => {
         alt='logo'
         width={100}
         height={100}
-        className='w-14 h-14 md:w-16 md:h-16 cursor-pointer object-cover bg-transparent rounded-full border-1 border-gray-800'
+        className='w-14 h-14 md:w-16 md:h-16 cursor-pointer object-cover bg-transparent rounded-full border-1 border-gray-400'
         onClick={(e) => handleNavClick(e, NAV_ITEMS[0].target)}
       />
       <NavigationMenu className='hidden md:block'>

@@ -31,7 +31,7 @@ const Certifications = () => {
         <Separator className='bg-cyan-400 py-[1px] mt-2' />
       </div>
 
-      <Accordion type='multiple' className='w-11/12' defaultValue={[]}>
+      <Accordion type='multiple' className='w-11/12 md:w-5/6 lg:w-2/3 max-w-6xl' defaultValue={[]}>
         {CERTIFICATIONS.map((cert, key) => (
           <AccordionItem key={key} value={cert.name}>
             <AccordionTrigger className='hover:no-underline cursor-pointer py-4 md:p-6 lg:p-8'>
@@ -91,13 +91,13 @@ const Certifications = () => {
                           <Button
                             asChild
                             variant='outline'
-                            className='w-full lg:w-1/3 h-7 md:h-10 lg:h-12 bg-transparent'
+                            className='w-full lg:w-2/3 h-7 md:h-10 lg:h-12 bg-transparent'
                           >
                             <Link
                               href={cert.certificateLink}
                               target='_blank'
                               rel='noopener noreferrer'
-                              className='flex items-center gap-1 lg:gap-3'
+                              className='flex items-center lg:gap-3'
                             >
                               <ExternalLink className='!w-3 !h-3 lg:!w-5 lg:!h-5' />
                               <span className='text-[10px] md:text-base lg:text-lg'>

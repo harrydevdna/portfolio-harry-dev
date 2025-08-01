@@ -1,4 +1,5 @@
 import { ICertificateProps, IProjectProps, ITimelineItemProps } from '@/types';
+import getYearOfExperiences from './yoe';
 
 export const NAV_ITEMS = [
   { label: 'About me', target: 'about-me' },
@@ -12,7 +13,7 @@ export type TNAV_TARGET = (typeof NAV_ITEMS)[number]['target'];
 
 export const ABOUT_ME_HI =
   'Hi there👋, My name is Huynh Van Phuot and you can call me Harry';
-export const ABOUT_ME_MAIN = 'Software Engineer based in Da Nang City, Vietnam';
+export const ABOUT_ME_MAIN = 'Software Engineer based in Ho Chi Minh City, Vietnam';
 export const WORK_EXPERIENCE = [
   {
     title: 'Software Engineer',
@@ -61,7 +62,7 @@ export const EDUCATION = [
 ] as ITimelineItemProps[];
 
 export const EXPERIENCE_TITLE =
-  'I am a Software Engineer from Vietnam with over 2 years of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies.';
+  `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
 
 export const EXPERIENCE_PROJECTS = [
   {
