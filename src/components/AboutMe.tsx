@@ -12,13 +12,13 @@ import {
   EDUCATION,
   WORK_EXPERIENCE,
 } from '@/constants';
+import { downloadResume } from '@/lib/downloadResume';
 import { ArrowRight, Download } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Timeline from './timeline/Timeline';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
-import { toast } from 'sonner';
 
 const AboutMe = () => {
   const words = ABOUT_ME_HI.split(' ');
@@ -39,32 +39,6 @@ const AboutMe = () => {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const handleResumeDownload = async () => {
-    try {
-      const response = await fetch("/resume/demo.pdf");
-      if (!response.ok) {
-        throw new Error("Resume file not found");
-      }
-      const blob = await response.blob();
-      
-      const url = URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Huynh-Van-Phuot_Resume_Software-Engineer.pdf";
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Oops, something went wrong 😢", {
-        description: "Please try again or contact me directly!",
-        duration: 2000,
-      })
-    }
-  }
 
   return (
     <section
@@ -107,7 +81,7 @@ const AboutMe = () => {
         <Button
           variant='secondary'
           className='md:text-xl border-[1px] border-black dark:border-white !px-4 !py-6 md:!p-8 rounded-full cursor-pointer'
-          onClick={handleResumeDownload}
+          onClick={downloadResume}
         >
           My resume
           <Download className='!w-5 !h-5 md:!w-8 md:!h-8' />
