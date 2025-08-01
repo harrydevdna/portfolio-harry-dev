@@ -1,5 +1,5 @@
+import getYearOfExperiences from '@/lib/yoe';
 import { ICertificateProps, IProjectProps, ITimelineItemProps } from '@/types';
-import getYearOfExperiences from './yoe';
 
 export const NAV_ITEMS = [
   { label: 'About me', target: 'about-me' },
@@ -13,7 +13,8 @@ export type TNAV_TARGET = (typeof NAV_ITEMS)[number]['target'];
 
 export const ABOUT_ME_HI =
   'Hi there👋, My name is Huynh Van Phuot and you can call me Harry';
-export const ABOUT_ME_MAIN = 'Software Engineer based in Ho Chi Minh City, Vietnam';
+export const ABOUT_ME_MAIN =
+  'Software Engineer based in Ho Chi Minh City, Vietnam';
 export const WORK_EXPERIENCE = [
   {
     title: 'Software Engineer',
@@ -61,8 +62,7 @@ export const EDUCATION = [
   },
 ] as ITimelineItemProps[];
 
-export const EXPERIENCE_TITLE =
-  `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
+export const EXPERIENCE_TITLE = `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
 
 export const EXPERIENCE_PROJECTS = [
   {
@@ -72,11 +72,8 @@ export const EXPERIENCE_PROJECTS = [
     logo: '/experience/spartan.webp',
     location: 'Da Nang City, Vietnam',
     period: '08/2025 - Present',
-    description:
-      'Wait for update...',
-    responsibilities: [
-      'Wait for update...',
-    ],
+    description: 'Wait for update...',
+    responsibilities: ['Wait for update...'],
     technologies: {
       'front-end': 'ReactJS, NextJS, Ant Design',
     },
@@ -99,7 +96,7 @@ export const EXPERIENCE_PROJECTS = [
     ],
     technologies: {
       'front-end': 'JavaScript, TypeScript, ReactJS, Phaser',
-      'others': 'Jira, GitLab, Slack, MS Teams',
+      others: 'Jira, GitLab, Slack, MS Teams',
     },
     teamSize: 12,
   },
@@ -121,7 +118,8 @@ export const EXPERIENCE_PROJECTS = [
     technologies: {
       'front-end': 'ReactJS, JavaScript',
       'back-end': 'NodeJS, NestJS',
-      'others': 'PostgreSQL, MongoDB, Bitbucket, Postman, Docker, Datadog, MS Teams',
+      others:
+        'PostgreSQL, MongoDB, Bitbucket, Postman, Docker, Datadog, MS Teams',
     },
     teamSize: 30,
   },
@@ -143,7 +141,7 @@ export const EXPERIENCE_PROJECTS = [
       'front-end':
         'NextJS, NextUI, TypeScript, JavaScript, TailwindCSS, Vite, React Native, React Native Paper, Redux Toolkit, Expo',
       'back-end': 'C#, Entity Framework, Dapper, AutoMapper',
-      'others':
+      others:
         'MySQL, AWS, EC2, S3, Elastic Load Balancing, Ansible, Docker, Github Actions, RDS, Firebase Service, Google Map, Jira, Figma, Postman',
     },
     teamSize: 5,
@@ -161,7 +159,7 @@ export const EXPERIENCE_PROJECTS = [
     ],
     technologies: {
       'front-end': 'NextJS, TailwindCSS, MUI, TypeScript',
-      'others': 'Jira, GitHub Desktop, Figma',
+      others: 'Jira, GitHub Desktop, Figma',
     },
     teamSize: 2,
   },
@@ -183,7 +181,7 @@ export const EXPERIENCE_PROJECTS = [
       'front-end':
         'JavaScript, ReactJS, Redux Toolkit, SCSS, Socket.IO, Material UI',
       'back-end': 'Java, Spring Boot, JUnit Test',
-      'others': 'MySQL, GitHub Actions, AWS, Kafka, Docker, Jira, Figma, Postman',
+      others: 'MySQL, GitHub Actions, AWS, Kafka, Docker, Jira, Figma, Postman',
     },
     teamSize: 5,
   },
