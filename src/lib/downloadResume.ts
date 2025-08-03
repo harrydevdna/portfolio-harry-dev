@@ -17,6 +17,10 @@ export const downloadResume = async () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    toast.success("Downloaded successfully!", {
+      description: "Thank you for your interest!",
+      duration: 3000,
+    })
   } catch (error) {
     toast.error(
       error instanceof Error ? error.message : 'Oops, something went wrong 😢',

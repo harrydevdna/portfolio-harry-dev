@@ -1,6 +1,5 @@
 import { CERTIFICATIONS } from '@/constants';
 import {
-  Award,
   BadgeCheckIcon,
   Building2,
   Calendar,
