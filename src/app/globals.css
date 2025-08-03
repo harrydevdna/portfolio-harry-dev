@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -125,7 +125,7 @@ html {
   scroll-behavior: smooth;
 }
 
-*{
+* {
   font-family: outfit;
 }
 
@@ -139,5 +139,36 @@ html {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.rotate-angle {
+  --translateZ: 150px;
+  transform: rotateY(var(--angle)) translateZ(var(--translateZ));
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animate-rotate3d {
+  animation: rotate3d 15s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@media (width >= 48rem) {
+  .rotate-angle {
+    --translateZ: 300px;
+  }
+}
+
+@media (width >= 64rem) {
+  .rotate-angle {
+    --translateZ: 500px;
   }
 }

@@ -112,11 +112,11 @@ const Contact = () => {
             return (
               <Card
                 key={index}
-                className='group hover:shadow-lg py-3 md:py-6 transition-all duration-300 border-2 dark:hover:border-gray-200 hover:border-gray-500'
+                className='group hover:shadow-xl hover:scale-[102%] py-3 md:py-6 transition-all duration-300'
               >
                 <CardContent className='px-2 md:px-4'>
                   <div className='flex items-center justify-between'>
-                    <div className='flex items-center gap-4'>
+                    <div className='flex items-center gap-2 md:gap-4'>
                       <div
                         className={`p-2 md:p-3 rounded-full bg-gray-200 dark:bg-gray-700 group-hover:bg-gray-300 dark:group-hover:bg-gray-500 transition-colors ${item.color}`}
                       >
@@ -132,7 +132,7 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className='flex gap-2'>
+                    <div className='flex lg:gap-2'>
                       {item.copyable && (
                         <Button
                           variant='ghost'

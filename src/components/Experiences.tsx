@@ -54,9 +54,9 @@ const Experiences = () => {
           {EXPERIENCE_PROJECTS.map((experience, index) => (
             <CarouselItem
               key={index}
-              className='basis-1/1 md:basis-1/2 lg:basis-1/3'
+              className='basis-1/1 md:basis-1/2 lg:basis-1/3 lg:py-4'
             >
-              <Card className='h-[215px] md:h-[300px] lg:h-[60vh] lg:max-h-[350px] py-4 md:py-8 flex justify-between dark:border-1 dark:border-gray-600'>
+              <Card className='h-[215px] md:h-[300px] lg:h-[350px] py-4 md:py-8 flex justify-between group hover:shadow-xl hover:scale-[102%] transition-all duration-300 z-10'>
                 <CardHeader>
                   <div className='flex items-center gap-4'>
                     <Image
