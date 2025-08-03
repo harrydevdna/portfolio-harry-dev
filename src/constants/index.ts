@@ -1,5 +1,5 @@
-import getYearOfExperiences from '@/lib/yoe';
-import { ICertificateProps, IProjectProps, ITimelineItemProps } from '@/types';
+import getYearOfExperiences from "@/lib/yoe";
+import { ICertificateProps, IProjectProps, ISkillProps, ITimelineItemProps } from "@/types";
 
 export const NAV_ITEMS = [
   { label: 'About me', target: 'about-me' },
@@ -11,6 +11,7 @@ export const NAV_ITEMS = [
 
 export type TNAV_TARGET = (typeof NAV_ITEMS)[number]['target'];
 
+// About me section
 export const ABOUT_ME_HI =
   'Hi there👋, My name is Huynh Van Phuot and you can call me Harry';
 export const ABOUT_ME_MAIN =
@@ -62,7 +63,73 @@ export const EDUCATION = [
   },
 ] as ITimelineItemProps[];
 
-export const EXPERIENCE_TITLE = `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
+// Technical Skills
+export const TECHNICAL_SKILLS = [
+  {
+    name: 'JavaScript',
+    imageUrl: '/skill/js.svg'
+  },
+  {
+    name: 'TypeScript',
+    imageUrl: '/skill/ts.svg'
+  },
+  {
+    name: 'ReactJS',
+    imageUrl: '/skill/react.svg'
+  },
+  {
+    name: 'NextJS',
+    imageUrl: '/skill/nextjs.svg'
+  },
+  {
+    name: 'TailwindCSS',
+    imageUrl: '/skill/tailwind.svg'
+  },
+  {
+    name: 'Ant Design',
+    imageUrl: '/skill/antd.svg'
+  },
+  {
+    name: 'Material UI',
+    imageUrl: '/skill/mui.svg'
+  },
+  {
+    name: 'Figma',
+    imageUrl: '/skill/figma.svg'
+  },
+  {
+    name: 'React Native',
+    imageUrl: '/skill/react-native.svg'
+  },
+  {
+    name: 'Git',
+    imageUrl: '/skill/git.svg'
+  },
+  {
+    name: 'Postman',
+    imageUrl: '/skill/postman.svg'
+  },
+  {
+    name: 'Redux',
+    imageUrl: '/skill/redux.svg'
+  },
+  {
+    name: 'Sass',
+    imageUrl: '/skill/sass.svg'
+  },
+  {
+    name: 'NodeJS',
+    imageUrl: '/skill/node-js.svg'
+  },
+  {
+    name: 'Java',
+    imageUrl: '/skill/java.svg'
+  },
+] as ISkillProps[];
+
+// Experience section
+export const EXPERIENCE_TITLE =
+  `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
 
 export const EXPERIENCE_PROJECTS = [
   {
@@ -75,9 +142,9 @@ export const EXPERIENCE_PROJECTS = [
     description: 'Wait for update...',
     responsibilities: ['Wait for update...'],
     technologies: {
-      'front-end': 'ReactJS, NextJS, Ant Design',
+      'front-end': 'ReactJS, NextJS, Ant Design, TanStack',
     },
-    teamSize: 10,
+    teamSize: 'Wait for update...',
   },
   {
     title: 'Game Developer',
@@ -187,6 +254,7 @@ export const EXPERIENCE_PROJECTS = [
   },
 ] as IProjectProps[];
 
+// Certification section
 export const CERTIFICATIONS = [
   {
     name: 'Test of English for International Communication (TOEIC)',
@@ -267,6 +335,7 @@ export const CERTIFICATIONS = [
   },
 ] as ICertificateProps[];
 
+// Contact section
 export const CONTACT_INFORMATION = {
   phoneNumber: '0372485570',
   email: 'phuothuynh2002@gmail.com',

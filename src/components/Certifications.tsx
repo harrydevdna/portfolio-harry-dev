@@ -42,7 +42,7 @@ const Certifications = () => {
             </AccordionTrigger>
 
             <AccordionContent className='flex flex-col gap-4 text-balance md:px-6 lg:px-18'>
-              <Card className='shadow-sm dark:border-1 dark:border-gray-600'>
+              <Card className='shadow-sm dark:border-1 dark:border-gray-600 group hover:shadow-xl hover:scale-[102%] transition-all duration-300'>
                 <CardContent>
                   <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
                     <div className='flex lg:flex-col justify-between'>
@@ -114,8 +114,8 @@ const Certifications = () => {
                         <Image
                           src={cert.certificateImage}
                           alt={`${cert.name} certificate`}
-                          width={400}
-                          height={300}
+                          width={350}
+                          height={200}
                           className='w-full h-auto rounded-lg shadow-lg border border-border object-contain bg-white'
                         />
                         <div className='absolute top-2 right-2'>

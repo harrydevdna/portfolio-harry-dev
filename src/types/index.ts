@@ -38,3 +38,16 @@ export interface ICertificateProps {
   certificateImage: string;
   certificateLink: string;
 }
+
+export interface ISkillProps {
+  name: string;
+  imageUrl: string;
+}
+
+export interface IParticle {
+  x: number
+  y: number
+  vx: number
+  vy: number
+  radius: number
+}

@@ -1,8 +1,9 @@
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import ScrollToTopButton from "@/components/scroll-top-top/ScrollToTopButton";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -40,6 +41,7 @@ export default function RootLayout({
             }
           }}/>
         </ThemeProvider>
+        <ScrollToTopButton />
       </body>
     </html>
   );
