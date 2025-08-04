@@ -54,7 +54,7 @@ const AboutMe = () => {
         width={200}
         height={200}
         alt='avatar'
-        className='w-28 h-28 md:w-40 md:h-40 rounded-full object-cover'
+        className='w-36 h-36 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full object-cover'
       />
       <h4 className='md:text-xl lg:text-2xl text-center h-8 md:h-[25px] lg:h-[30px]'>
         {words.slice(0, visibleWordCount).map((word, idx) => (
