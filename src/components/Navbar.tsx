@@ -126,21 +126,21 @@ const Navbar = () => {
         >
           <X className='!w-8 !h-8' color='red' />
         </Button>
-        <a className='py-2 text-xl' href='#about-me' onClick={closeMenu}>
-          About me
-        </a>
-        <a className='py-2 text-xl' href='#skills' onClick={closeMenu}>
-          Skills
-        </a>
-        <a className='py-2 text-xl' href='#experiences' onClick={closeMenu}>
-          Experiences
-        </a>
-        <a className='py-2 text-xl' href='#certifications' onClick={closeMenu}>
-          Certifications
-        </a>
-        <a className='py-2 text-xl' href='#contact' onClick={closeMenu}>
-          Contact
-        </a>
+
+        {NAV_ITEMS.map(item => (
+          <a
+            key={item.target} 
+            href={`#${item.target}`}
+            className={`py-2 text-xl ${
+              activeSection === item.target
+                ? 'font-bold'
+                : 'text-gray-500'
+              }`}
+            onClick={closeMenu}
+          >
+            {item.label}
+          </a>
+        ))}
       </ul>
     </div>
   );

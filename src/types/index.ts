@@ -26,7 +26,7 @@ export interface IProjectProps {
     'back-end'?: string;
     'others'?: string;
   };
-  teamSize: number;
+  teamSize?: number;
   link?: string;
 }
 

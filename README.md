@@ -1,38 +1,94 @@
-# portfolio-harry-dev
+# Portfolio Harry Dev 🚀
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hi there! I'm Huynh Van Phuot, a passionate and curious software engineer who loves turning ideas into reality through code. I specialize in JavaScript, TypeScript, ReactJS, Nextjs, TailwindCSS and enjoy building clean, efficient, and impactful solutions.
+
+This portfolio is a curated collection of my personal and professional projects, showcasing my skills, creativity, and growth as a software engineer. Whether it's solving real-world problems or experimenting with new tech, I'm always eager to learn and build.
+
+## Responsive with all common devices 📱 💻
+
+<p align="center">
+  <img src="public/readme/mobile.webp" width="50%" title="Mobile devices">
+</p>
+
+<p align="center">
+  <img src="public/readme/ipad.webp" width="80%" title="Ipad devices">
+</p>
+
+<p align="center">
+  <img src="public/readme/laptop.webp" width="100%" title="Laptop devices">
+</p>
+
+## Tech Stack 🛠
+
+- React.js
+- Next.js
+- Shadcn/ui
+- TailwindCSS
+- Lucide icons
+
+## Demo
+
+- Click [here](https://portfolio-harry-dev-pink.vercel.app/) to view the live demo.
 
 ## Getting Started
 
-First, run the development server:
+To get started with this portfolio template, follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+Make sure you have react `19.0.0` or higher and next `15.0.0` or higher installed.
+
+### Setup
+
+- With git, clone the code to your machine, or download a ZIP of all the files directly.
+
+```
+git clone https://github.com/harrydevdna/portfolio-harry-dev.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```
+cd portfolio-harry-dev && code .
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- After opening the files in Visual Studio Code, open the **VS Code** integrated terminal and run the following commands:
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+This will install all the packages and dependencies used in the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Run the following command to start a local server:
 
-## Deploy on Vercel
+```
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- To create a production build:
+
+```
+npm run build
+```
+
+## Authors
+
+👤 **Harry Dev**
+
+- GitHub: [@harrydevdna](https://github.com/harrydevdna)
+- LinkedIn: [harrydevdna](https://www.linkedin.com/in/harrydevdna)
+
+## Feedback and Contributions
+
+If you have any feedback, suggestions, or would like to contribute to this project, your involvement is highly valued. Feel free to reach out to us at phuothuynh2002@gmail.com!
+
+Happy coding and showcasing!
+
+## Support
+
+Give a ⭐️ if you like this project!

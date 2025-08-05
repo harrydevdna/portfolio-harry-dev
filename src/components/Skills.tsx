@@ -1,6 +1,6 @@
 'use client';
 
-import { TECHNICAL_SKILLS } from '@/constants';
+import { TECHNICAL_SKILLS_DARK, TECHNICAL_SKILLS_LIGHT } from '@/constants';
 import { IParticle } from '@/types';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
@@ -117,22 +117,42 @@ const Skills = () => {
         className="absolute inset-0 h-full pointer-events-none max-w-11/12 mx-auto"
       />
 
-      <div className="mx-auto perspective-midrange w-full lg:w-[1000px] h-[150px] md:h-[300px] lg:h-[500px]">
-        <div className="w-full h-full transform-style-3d animate-rotate3d">
-          {TECHNICAL_SKILLS.map((skill, index) => {
-          const angle = `${(360 / TECHNICAL_SKILLS.length) * index}deg`;
-          
-          return (
-            <Image
-              key={skill.name}
-              src={skill.imageUrl}
-              alt={skill.name}
-              width={24}
-              height={24}
-              className="absolute top-1/2 left-1/2 w-10 md:w-20 lg:w-24 object-contain origin-center -translate-x-1/2 -translate-y-1/2 rotate-angle"
-              style={{ '--angle': angle } as React.CSSProperties}
-            />
-          )
+      {/* Light mode skills */}
+      <div className="dark:hidden mx-auto perspective-midrange w-full lg:w-[1000px] h-[150px] md:h-[300px] lg:h-[500px]">
+        <div className="w-full h-full transform-3d animate-rotate3d">
+          {TECHNICAL_SKILLS_LIGHT.map((skill, index) => {
+            const angle = `${(360 / TECHNICAL_SKILLS_LIGHT.length) * index}deg`;
+            return (
+              <Image
+                key={skill.name}
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={24}
+                height={24}
+                className="absolute top-1/2 left-1/2 w-10 md:w-20 lg:w-24 object-contain origin-center -translate-x-1/2 -translate-y-1/2 rotate-angle"
+                style={{ '--angle': angle } as React.CSSProperties}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Dark mode skills */}
+      <div className="hidden dark:block mx-auto perspective-midrange w-full lg:w-[1000px] h-[150px] md:h-[300px] lg:h-[500px]">
+        <div className="w-full h-full transform-3d animate-rotate3d">
+          {TECHNICAL_SKILLS_DARK.map((skill, index) => {
+            const angle = `${(360 / TECHNICAL_SKILLS_DARK.length) * index}deg`;
+            return (
+              <Image
+                key={skill.name}
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={24}
+                height={24}
+                className="absolute top-1/2 left-1/2 w-10 md:w-20 lg:w-24 object-contain origin-center -translate-x-1/2 -translate-y-1/2 rotate-angle"
+                style={{ '--angle': angle } as React.CSSProperties}
+              />
+            );
           })}
         </div>
       </div>
