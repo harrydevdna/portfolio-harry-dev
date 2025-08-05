@@ -158,7 +158,6 @@ html {
 
 .animate-rotate3d {
   animation: rotate3d 15s linear infinite;
-  transform-style: preserve-3d;
 }
 
 @media (width >= 48rem) {

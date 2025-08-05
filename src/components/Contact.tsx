@@ -120,7 +120,7 @@ const Contact = () => {
                       <div
                         className={`p-2 md:p-3 rounded-full bg-gray-200 dark:bg-gray-700 group-hover:bg-gray-300 dark:group-hover:bg-gray-500 transition-colors ${item.color}`}
                       >
-                        <Icon className='w-4 h-4 md:w-5 md:h-5' />
+                        <Icon className='w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6' />
                       </div>
                       <div>
                         <p className='text-base md:text-lg text-start text-muted-foreground font-medium'>
@@ -136,7 +136,7 @@ const Contact = () => {
                       {item.copyable && (
                         <Button
                           variant='ghost'
-                          size='sm'
+                          size='icon'
                           onClick={() =>
                             copyToClipboard(item.value, item.label)
                           }

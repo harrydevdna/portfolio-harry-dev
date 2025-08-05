@@ -64,7 +64,7 @@ export const EDUCATION = [
 ] as ITimelineItemProps[];
 
 // Technical Skills
-export const TECHNICAL_SKILLS = [
+export const TECHNICAL_SKILLS_LIGHT = [
   {
     name: 'JavaScript',
     imageUrl: '/skill/js.svg'
@@ -127,6 +127,69 @@ export const TECHNICAL_SKILLS = [
   },
 ] as ISkillProps[];
 
+export const TECHNICAL_SKILLS_DARK = [
+  {
+    name: 'JavaScript',
+    imageUrl: '/skill/js.svg'
+  },
+  {
+    name: 'TypeScript',
+    imageUrl: '/skill/ts.svg'
+  },
+  {
+    name: 'ReactJS',
+    imageUrl: '/skill/react.svg'
+  },
+  {
+    name: 'NextJS',
+    imageUrl: '/skill/nextjs-dark.svg'
+  },
+  {
+    name: 'TailwindCSS',
+    imageUrl: '/skill/tailwind.svg'
+  },
+  {
+    name: 'Ant Design',
+    imageUrl: '/skill/antd.svg'
+  },
+  {
+    name: 'Material UI',
+    imageUrl: '/skill/mui.svg'
+  },
+  {
+    name: 'Figma',
+    imageUrl: '/skill/figma.svg'
+  },
+  {
+    name: 'React Native',
+    imageUrl: '/skill/react-native.svg'
+  },
+  {
+    name: 'Git',
+    imageUrl: '/skill/git.svg'
+  },
+  {
+    name: 'Postman',
+    imageUrl: '/skill/postman.svg'
+  },
+  {
+    name: 'Redux',
+    imageUrl: '/skill/redux.svg'
+  },
+  {
+    name: 'Sass',
+    imageUrl: '/skill/sass.svg'
+  },
+  {
+    name: 'NodeJS',
+    imageUrl: '/skill/node-js-dark.svg'
+  },
+  {
+    name: 'Java',
+    imageUrl: '/skill/java.svg'
+  },
+] as ISkillProps[];
+
 // Experience section
 export const EXPERIENCE_TITLE =
   `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
@@ -144,7 +207,6 @@ export const EXPERIENCE_PROJECTS = [
     technologies: {
       'front-end': 'ReactJS, NextJS, Ant Design, TanStack',
     },
-    teamSize: 'Wait for update...',
   },
   {
     title: 'Game Developer',
@@ -165,7 +227,6 @@ export const EXPERIENCE_PROJECTS = [
       'front-end': 'JavaScript, TypeScript, ReactJS, Phaser',
       others: 'Jira, GitLab, Slack, MS Teams',
     },
-    teamSize: 12,
   },
   {
     title: 'Full-Stack Developer',
@@ -188,7 +249,6 @@ export const EXPERIENCE_PROJECTS = [
       others:
         'PostgreSQL, MongoDB, Bitbucket, Postman, Docker, Datadog, MS Teams',
     },
-    teamSize: 30,
   },
   {
     title: 'Front-End Developer',
