@@ -1,5 +1,5 @@
-'use client';
-import { CONTACT_CONTENT, CONTACT_INFORMATION } from '@/constants';
+'use client'
+import { CONTACT_CONTENT, CONTACT_INFORMATION } from '@/constants'
 import {
   CheckCircle,
   CodeXml,
@@ -11,14 +11,14 @@ import {
   Heart,
   Linkedin,
   Mail,
-  Phone
-} from 'lucide-react';
-import Link from 'next/link';
-import { useState } from 'react';
-import { toast } from 'sonner';
-import { Button } from './ui/button';
-import { Card, CardContent } from './ui/card';
-import { Separator } from './ui/separator';
+  Phone,
+} from 'lucide-react'
+import Link from 'next/link'
+import { useState } from 'react'
+import { toast } from 'sonner'
+import { Button } from './ui/button'
+import { Card, CardContent } from './ui/card'
+import { Separator } from './ui/separator'
 
 const contactItems = [
   {
@@ -70,15 +70,15 @@ const contactItems = [
     external: true,
     color: 'text-blue-600 dark:text-blue-400',
   },
-];
+]
 
 const Contact = () => {
-  const [copiedField, setCopiedField] = useState<string | null>(null);
+  const [copiedField, setCopiedField] = useState<string | null>(null)
 
   const copyToClipboard = async (text: string, field: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopiedField(field);
+      await navigator.clipboard.writeText(text)
+      setCopiedField(field)
       toast(`${field} copied to clipboard!`, {
         description: text,
         duration: 2000,
@@ -86,12 +86,12 @@ const Contact = () => {
           label: 'Close',
           onClick: () => toast.dismiss(),
         },
-      });
-      setTimeout(() => setCopiedField(null), 2000);
+      })
+      setTimeout(() => setCopiedField(null), 2000)
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error('Failed to copy: ', err)
     }
-  };
+  }
 
   return (
     <div
@@ -106,8 +106,8 @@ const Contact = () => {
       <div className='text-center lg:text-left'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 w-[90vw] md:w-[60vw] max-w-5xl'>
           {contactItems.map((item, index) => {
-            const Icon = item.icon;
-            const isCopied = copiedField === item.label;
+            const Icon = item.icon
+            const isCopied = copiedField === item.label
 
             return (
               <Card
@@ -175,7 +175,7 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-            );
+            )
           })}
         </div>
       </div>
@@ -201,7 +201,7 @@ const Contact = () => {
         <p>All Rights Reserved</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

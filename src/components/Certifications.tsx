@@ -1,23 +1,23 @@
-import { CERTIFICATIONS } from '@/constants';
+import { CERTIFICATIONS } from '@/constants'
 import {
   BadgeCheckIcon,
   Building2,
   Calendar,
   ExternalLink,
   Trophy,
-} from 'lucide-react';
+} from 'lucide-react'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './ui/accordion';
-import { Separator } from './ui/separator';
-import { Card, CardContent } from './ui/card';
-import { Button } from './ui/button';
-import Image from 'next/image';
-import { Badge } from './ui/badge';
-import Link from 'next/link';
+} from './ui/accordion'
+import { Separator } from './ui/separator'
+import { Card, CardContent } from './ui/card'
+import { Button } from './ui/button'
+import Image from 'next/image'
+import { Badge } from './ui/badge'
+import Link from 'next/link'
 
 const Certifications = () => {
   return (
@@ -30,7 +30,11 @@ const Certifications = () => {
         <Separator className='bg-cyan-400 py-[1px] mt-2' />
       </div>
 
-      <Accordion type='multiple' className='w-11/12 md:w-5/6 lg:w-2/3 max-w-6xl' defaultValue={[]}>
+      <Accordion
+        type='multiple'
+        className='w-11/12 md:w-5/6 lg:w-2/3 max-w-6xl'
+        defaultValue={[]}
+      >
         {CERTIFICATIONS.map((cert, key) => (
           <AccordionItem key={key} value={cert.name}>
             <AccordionTrigger className='hover:no-underline cursor-pointer py-4 md:p-6 lg:p-8'>
@@ -135,7 +139,7 @@ const Certifications = () => {
         ))}
       </Accordion>
     </div>
-  );
-};
+  )
+}
 
-export default Certifications;
+export default Certifications

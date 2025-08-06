@@ -80,7 +80,7 @@ npm run build
 
 👤 **Harry Dev**
 
-- GitHub: [@harrydevdna](https://github.com/harrydevdna)
+- GitHub: [harrydevdna](https://github.com/harrydevdna)
 - LinkedIn: [harrydevdna](https://www.linkedin.com/in/harrydevdna)
 
 ## Feedback and Contributions

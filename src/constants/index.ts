@@ -225,7 +225,7 @@ export const EXPERIENCE_PROJECTS = [
     ],
     technologies: {
       'front-end': 'JavaScript, TypeScript, ReactJS, Phaser',
-      others: 'Jira, GitLab, Slack, MS Teams',
+      'others': 'Jira, GitLab, Slack, MS Teams',
     },
   },
   {
@@ -246,9 +246,10 @@ export const EXPERIENCE_PROJECTS = [
     technologies: {
       'front-end': 'ReactJS, JavaScript',
       'back-end': 'NodeJS, NestJS',
-      others:
+      'others':
         'PostgreSQL, MongoDB, Bitbucket, Postman, Docker, Datadog, MS Teams',
     },
+    teamSize: 30,
   },
   {
     title: 'Front-End Developer',
@@ -268,7 +269,7 @@ export const EXPERIENCE_PROJECTS = [
       'front-end':
         'NextJS, NextUI, TypeScript, JavaScript, TailwindCSS, Vite, React Native, React Native Paper, Redux Toolkit, Expo',
       'back-end': 'C#, Entity Framework, Dapper, AutoMapper',
-      others:
+      'others':
         'MySQL, AWS, EC2, S3, Elastic Load Balancing, Ansible, Docker, Github Actions, RDS, Firebase Service, Google Map, Jira, Figma, Postman',
     },
     teamSize: 5,
@@ -286,7 +287,7 @@ export const EXPERIENCE_PROJECTS = [
     ],
     technologies: {
       'front-end': 'NextJS, TailwindCSS, MUI, TypeScript',
-      others: 'Jira, GitHub Desktop, Figma',
+      'others': 'Jira, GitHub Desktop, Figma',
     },
     teamSize: 2,
   },
@@ -308,7 +309,7 @@ export const EXPERIENCE_PROJECTS = [
       'front-end':
         'JavaScript, ReactJS, Redux Toolkit, SCSS, Socket.IO, Material UI',
       'back-end': 'Java, Spring Boot, JUnit Test',
-      others: 'MySQL, GitHub Actions, AWS, Kafka, Docker, Jira, Figma, Postman',
+      'others': 'MySQL, GitHub Actions, AWS, Kafka, Docker, Jira, Figma, Postman',
     },
     teamSize: 5,
   },

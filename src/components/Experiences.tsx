@@ -1,31 +1,31 @@
-'use client';
+'use client'
 
-import { EXPERIENCE_PROJECTS, EXPERIENCE_TITLE } from '@/constants';
-import Autoplay from 'embla-carousel-autoplay';
-import { Calendar, MapPin } from 'lucide-react';
-import Image from 'next/image';
-import { useRef } from 'react';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { EXPERIENCE_PROJECTS, EXPERIENCE_TITLE } from '@/constants'
+import Autoplay from 'embla-carousel-autoplay'
+import { Calendar, MapPin } from 'lucide-react'
+import Image from 'next/image'
+import { useRef } from 'react'
+import { Badge } from './ui/badge'
+import { Button } from './ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from './ui/carousel';
+} from './ui/carousel'
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from './ui/dialog';
-import { Separator } from './ui/separator';
+} from './ui/dialog'
+import { Separator } from './ui/separator'
 
 const Experiences = () => {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
 
   return (
     <div
@@ -83,7 +83,9 @@ const Experiences = () => {
                   <div className='flex flex-col gap-2'>
                     <div className='flex items-center gap-2 text-sm text-muted-foreground'>
                       <Calendar className='w-4 h-4 lg:w-5 lg:h-5' />
-                      <span className='text-xs lg:text-lg'>{experience.period}</span>
+                      <span className='text-xs lg:text-lg'>
+                        {experience.period}
+                      </span>
                     </div>
                     {experience.location && (
                       <div className='flex items-center gap-2 text-sm text-muted-foreground'>
@@ -151,7 +153,9 @@ const Experiences = () => {
                           <h4 className='font-semibold mb-2 text-lg md:text-xl lg:text-2xl'>
                             Description:
                           </h4>
-                          <p className='md:text-lg lg:text-xl'>{experience.description}</p>
+                          <p className='md:text-lg lg:text-xl'>
+                            {experience.description}
+                          </p>
                         </div>
                         <div>
                           <h4 className='font-semibold mb-2 text-lg md:text-xl lg:text-2xl'>
@@ -213,7 +217,7 @@ const Experiences = () => {
         <CarouselNext />
       </Carousel>
     </div>
-  );
-};
+  )
+}
 
-export default Experiences;
+export default Experiences
