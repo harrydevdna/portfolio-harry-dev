@@ -1,72 +1,72 @@
-'use client';
-import { Button } from '@/components/ui/button';
+'use client'
+import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from '@/components/ui/navigation-menu';
-import { NAV_ITEMS, TNAV_TARGET } from '@/constants';
-import { AlignRight, X } from 'lucide-react';
-import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
-import { ThemeToggle } from './providers/theme-toggle';
+} from '@/components/ui/navigation-menu'
+import { NAV_ITEMS, TNAV_TARGET } from '@/constants'
+import { AlignRight, X } from 'lucide-react'
+import Image from 'next/image'
+import React, { useEffect, useRef, useState } from 'react'
+import { ThemeToggle } from './providers/theme-toggle'
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState<TNAV_TARGET>(
     NAV_ITEMS[0].target
-  );
-  const menuRef = useRef<HTMLUListElement | null>(null);
+  )
+  const menuRef = useRef<HTMLUListElement | null>(null)
 
   const openMenu = () => {
     if (menuRef.current) {
-      menuRef.current.style.transform = 'translateX(-12rem)';
+      menuRef.current.style.transform = 'translateX(-12rem)'
     }
-  };
+  }
 
   const closeMenu = () => {
     if (menuRef.current) {
-      menuRef.current.style.transform = 'translateX(12rem)';
+      menuRef.current.style.transform = 'translateX(12rem)'
     }
-  };
+  }
 
   useEffect(() => {
     const handleScroll = () => {
-      let current = NAV_ITEMS[0].target;
+      let current = NAV_ITEMS[0].target
       for (const item of NAV_ITEMS) {
-        const section = document.getElementById(item.target);
+        const section = document.getElementById(item.target)
         if (section) {
-          const rect = section.getBoundingClientRect();
+          const rect = section.getBoundingClientRect()
 
           if (rect.top <= 200 && rect.bottom > 200) {
-            current = item.target;
-            break;
+            current = item.target
+            break
           }
         }
       }
-      setActiveSection(current);
-    };
+      setActiveSection(current)
+    }
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement | HTMLImageElement, MouseEvent>,
     id: TNAV_TARGET
   ) => {
-    e.preventDefault();
+    e.preventDefault()
     if (menuRef) {
-      closeMenu();
+      closeMenu()
     }
-    const section = document.getElementById(id);
+    const section = document.getElementById(id)
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: 'smooth' })
     }
-    (e.target as HTMLAnchorElement).blur();
-  };
+    ;(e.target as HTMLAnchorElement).blur()
+  }
 
   return (
     <div className='flex justify-between items-center fixed w-full z-50 px-4 py-2 backdrop-blur-sm'>
@@ -127,15 +127,13 @@ const Navbar = () => {
           <X className='!w-8 !h-8' color='red' />
         </Button>
 
-        {NAV_ITEMS.map(item => (
+        {NAV_ITEMS.map((item) => (
           <a
-            key={item.target} 
+            key={item.target}
             href={`#${item.target}`}
             className={`py-2 text-xl ${
-              activeSection === item.target
-                ? 'font-bold'
-                : 'text-gray-500'
-              }`}
+              activeSection === item.target ? 'font-bold' : 'text-gray-500'
+            }`}
             onClick={closeMenu}
           >
             {item.label}
@@ -143,7 +141,7 @@ const Navbar = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

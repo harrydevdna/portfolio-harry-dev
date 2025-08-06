@@ -1,44 +1,44 @@
-'use client';
+'use client'
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from '@/components/ui/accordion'
 import {
   ABOUT_ME_HI,
   ABOUT_ME_MAIN,
   EDUCATION,
   WORK_EXPERIENCE,
-} from '@/constants';
-import { downloadResume } from '@/lib/downloadResume';
-import { ArrowRight, Download } from 'lucide-react';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import Timeline from './timeline/Timeline';
-import { Button } from './ui/button';
-import { Separator } from './ui/separator';
+} from '@/constants'
+import { downloadResume } from '@/lib/downloadResume'
+import { ArrowRight, Download } from 'lucide-react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import Timeline from './timeline/Timeline'
+import { Button } from './ui/button'
+import { Separator } from './ui/separator'
 
 const AboutMe = () => {
-  const words = ABOUT_ME_HI.split(' ');
-  const [visibleWordCount, setVisibleWordCount] = useState(0);
+  const words = ABOUT_ME_HI.split(' ')
+  const [visibleWordCount, setVisibleWordCount] = useState(0)
 
   useEffect(() => {
     if (visibleWordCount < words.length) {
       const timer = setTimeout(() => {
-        setVisibleWordCount(visibleWordCount + 1);
-      }, 100);
-      return () => clearTimeout(timer);
+        setVisibleWordCount(visibleWordCount + 1)
+      }, 100)
+      return () => clearTimeout(timer)
     }
-  }, [visibleWordCount, words.length]);
+  }, [visibleWordCount, words.length])
 
   const handleContactClick = () => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById('contact')
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <section
@@ -111,7 +111,7 @@ const AboutMe = () => {
         </AccordionItem>
       </Accordion>
     </section>
-  );
-};
+  )
+}
 
-export default AboutMe;
+export default AboutMe

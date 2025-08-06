@@ -1,6 +1,6 @@
-import { ITimelineItemProps, ITimelineProps } from '@/types';
-import { Building, MapPin, School } from 'lucide-react';
-import React from 'react';
+import { ITimelineItemProps, ITimelineProps } from '@/types'
+import { Building, MapPin, School } from 'lucide-react'
+import React from 'react'
 
 const TimelineItem: React.FC<ITimelineItemProps> = ({
   title,
@@ -54,8 +54,8 @@ const TimelineItem: React.FC<ITimelineItemProps> = ({
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Timeline: React.FC<ITimelineProps> = ({ items }) => {
   return (
@@ -64,7 +64,7 @@ const Timeline: React.FC<ITimelineProps> = ({ items }) => {
         <TimelineItem key={index} {...item} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Timeline;
+export default Timeline
