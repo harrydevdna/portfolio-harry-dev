@@ -1,5 +1,10 @@
-import getYearOfExperiences from "@/lib/yoe";
-import { ICertificateProps, IProjectProps, ISkillProps, ITimelineItemProps } from "@/types";
+import getYearOfExperiences from '@/lib/yoe';
+import {
+  ICertificateProps,
+  IProjectProps,
+  ISkillProps,
+  ITimelineItemProps,
+} from '@/types';
 
 export const NAV_ITEMS = [
   { label: 'About me', target: 'about-me' },
@@ -67,132 +72,131 @@ export const EDUCATION = [
 export const TECHNICAL_SKILLS_LIGHT = [
   {
     name: 'JavaScript',
-    imageUrl: '/skill/js.svg'
+    imageUrl: '/skill/js.svg',
   },
   {
     name: 'TypeScript',
-    imageUrl: '/skill/ts.svg'
+    imageUrl: '/skill/ts.svg',
   },
   {
     name: 'ReactJS',
-    imageUrl: '/skill/react.svg'
+    imageUrl: '/skill/react.svg',
   },
   {
     name: 'NextJS',
-    imageUrl: '/skill/nextjs.svg'
+    imageUrl: '/skill/nextjs.svg',
+  },
+  {
+    name: 'Vite',
+    imageUrl: '/skill/vite.svg',
   },
   {
     name: 'TailwindCSS',
-    imageUrl: '/skill/tailwind.svg'
+    imageUrl: '/skill/tailwind.svg',
   },
   {
     name: 'Ant Design',
-    imageUrl: '/skill/antd.svg'
+    imageUrl: '/skill/antd.svg',
   },
   {
     name: 'Material UI',
-    imageUrl: '/skill/mui.svg'
+    imageUrl: '/skill/mui.svg',
   },
   {
     name: 'Figma',
-    imageUrl: '/skill/figma.svg'
+    imageUrl: '/skill/figma.svg',
   },
   {
     name: 'React Native',
-    imageUrl: '/skill/react-native.svg'
+    imageUrl: '/skill/react-native.svg',
   },
   {
     name: 'Git',
-    imageUrl: '/skill/git.svg'
+    imageUrl: '/skill/git.svg',
   },
   {
     name: 'Postman',
-    imageUrl: '/skill/postman.svg'
+    imageUrl: '/skill/postman.svg',
   },
   {
     name: 'Redux',
-    imageUrl: '/skill/redux.svg'
+    imageUrl: '/skill/redux.svg',
   },
   {
     name: 'Sass',
-    imageUrl: '/skill/sass.svg'
+    imageUrl: '/skill/sass.svg',
   },
   {
     name: 'NodeJS',
-    imageUrl: '/skill/node-js.svg'
-  },
-  {
-    name: 'Java',
-    imageUrl: '/skill/java.svg'
+    imageUrl: '/skill/node-js.svg',
   },
 ] as ISkillProps[];
 
 export const TECHNICAL_SKILLS_DARK = [
   {
     name: 'JavaScript',
-    imageUrl: '/skill/js.svg'
+    imageUrl: '/skill/js.svg',
   },
   {
     name: 'TypeScript',
-    imageUrl: '/skill/ts.svg'
+    imageUrl: '/skill/ts.svg',
   },
   {
     name: 'ReactJS',
-    imageUrl: '/skill/react.svg'
+    imageUrl: '/skill/react.svg',
   },
   {
     name: 'NextJS',
-    imageUrl: '/skill/nextjs-dark.svg'
+    imageUrl: '/skill/nextjs-dark.svg',
+  },
+  {
+    name: 'Vite',
+    imageUrl: '/skill/vite.svg',
   },
   {
     name: 'TailwindCSS',
-    imageUrl: '/skill/tailwind.svg'
+    imageUrl: '/skill/tailwind.svg',
   },
   {
     name: 'Ant Design',
-    imageUrl: '/skill/antd.svg'
+    imageUrl: '/skill/antd.svg',
   },
   {
     name: 'Material UI',
-    imageUrl: '/skill/mui.svg'
+    imageUrl: '/skill/mui.svg',
   },
   {
     name: 'Figma',
-    imageUrl: '/skill/figma.svg'
+    imageUrl: '/skill/figma.svg',
   },
   {
     name: 'React Native',
-    imageUrl: '/skill/react-native.svg'
+    imageUrl: '/skill/react-native.svg',
   },
   {
     name: 'Git',
-    imageUrl: '/skill/git.svg'
+    imageUrl: '/skill/git.svg',
   },
   {
     name: 'Postman',
-    imageUrl: '/skill/postman.svg'
+    imageUrl: '/skill/postman.svg',
   },
   {
     name: 'Redux',
-    imageUrl: '/skill/redux.svg'
+    imageUrl: '/skill/redux.svg',
   },
   {
     name: 'Sass',
-    imageUrl: '/skill/sass.svg'
+    imageUrl: '/skill/sass.svg',
   },
   {
     name: 'NodeJS',
-    imageUrl: '/skill/node-js-dark.svg'
-  },
-  {
-    name: 'Java',
-    imageUrl: '/skill/java.svg'
+    imageUrl: '/skill/node-js-dark.svg',
   },
 ] as ISkillProps[];
 
 // Experience section
-export const EXPERIENCE_TITLE =
-  `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
+export const EXPERIENCE_TITLE = `I am a Software Engineer from Vietnam with ${getYearOfExperiences()} of experience working at companies such as Spartan, Nexon, and FPT Software. In addition to my professional roles, I also completed several projects during my university studies`;
 
 export const EXPERIENCE_PROJECTS = [
   {
@@ -225,7 +229,7 @@ export const EXPERIENCE_PROJECTS = [
     ],
     technologies: {
       'front-end': 'JavaScript, TypeScript, ReactJS, Phaser',
-      'others': 'Jira, GitLab, Slack, MS Teams',
+      others: 'Jira, GitLab, Slack, MS Teams',
     },
   },
   {
@@ -246,7 +250,7 @@ export const EXPERIENCE_PROJECTS = [
     technologies: {
       'front-end': 'ReactJS, JavaScript',
       'back-end': 'NodeJS, NestJS',
-      'others':
+      others:
         'PostgreSQL, MongoDB, Bitbucket, Postman, Docker, Datadog, MS Teams',
     },
     teamSize: 30,
@@ -269,7 +273,7 @@ export const EXPERIENCE_PROJECTS = [
       'front-end':
         'NextJS, NextUI, TypeScript, JavaScript, TailwindCSS, Vite, React Native, React Native Paper, Redux Toolkit, Expo',
       'back-end': 'C#, Entity Framework, Dapper, AutoMapper',
-      'others':
+      others:
         'MySQL, AWS, EC2, S3, Elastic Load Balancing, Ansible, Docker, Github Actions, RDS, Firebase Service, Google Map, Jira, Figma, Postman',
     },
     teamSize: 5,
@@ -287,7 +291,7 @@ export const EXPERIENCE_PROJECTS = [
     ],
     technologies: {
       'front-end': 'NextJS, TailwindCSS, MUI, TypeScript',
-      'others': 'Jira, GitHub Desktop, Figma',
+      others: 'Jira, GitHub Desktop, Figma',
     },
     teamSize: 2,
   },
@@ -309,7 +313,7 @@ export const EXPERIENCE_PROJECTS = [
       'front-end':
         'JavaScript, ReactJS, Redux Toolkit, SCSS, Socket.IO, Material UI',
       'back-end': 'Java, Spring Boot, JUnit Test',
-      'others': 'MySQL, GitHub Actions, AWS, Kafka, Docker, Jira, Figma, Postman',
+      others: 'MySQL, GitHub Actions, AWS, Kafka, Docker, Jira, Figma, Postman',
     },
     teamSize: 5,
   },
